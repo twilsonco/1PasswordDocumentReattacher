@@ -23,7 +23,7 @@ After successful reattachment, it will archive the stand-alone documents and rem
 ## Example usage
 
  ```sh
- 1password_documents_to_attachments.py --dry-run --archive-docs --supervise-run --item-whitelist "item1" "item2" --item-blacklist "long item3" "item forty-two"
+ 1password_document_reattacher.py --dry-run --archive-docs --supervise-run --item-whitelist "item1" "item2" --item-blacklist "long item3" "item forty-two"
  ```
 
 ## Arguments
