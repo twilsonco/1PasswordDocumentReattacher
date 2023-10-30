@@ -4,7 +4,9 @@
 
 This script is used to convert documents that were created automatically from item attachments during the upgrade process to 1Password v7 back into attachments. With the release of 1Password 8, attachments are back, and this script reverses the process that took place during the upgrade to version 7, replacing document references with attachments and removing the standalone document items and document references.
 
-This will replace all references to stand-alone documents with attachments—not only those created in the v7 upgrade process. After successful reattachment, it will archive the stand-alone documents and remove the document references from the items that referenced them. It will not consider standalone documents except those referenced by some other item. If multiple items reference the same standalone document, it will be added as an attachment to each referencing item. It will also archive the original documents if the `--archive-docs` flag is set. 
+This will replace all references to stand-alone documents with attachments—not only those created in the v7 upgrade process. If a document has additional files attached to it, those additional files will be lost (this would never happen with documents created during the v7 upgrade). 
+
+After successful reattachment, it will archive the stand-alone documents and remove the document references from the items that referenced them. It will not consider standalone documents except those referenced by some other item. If multiple items reference the same standalone document, it will be added as an attachment to each referencing item. It will also archive the original documents if the `--archive-docs` flag is set. 
 
 * **Make a backup of your 1Password account before use**  
   * Use "*File → Export → \<your account name\>*" before running this script, and use the `--dry-run` or `--supervise-run` options for finer visibility and control over the process.
