@@ -302,6 +302,10 @@ def main(dry_run=DRY_RUN,
                             skipped_docs["user skipped"].append({"item": itm_name, "document": ref_name, "item link": itm_lnk})
                             continue
                 
+                if len(ref_j["files"]) > 1:
+                    if verbose: print(f"---- Skipping: {ref_name}, more than one file")
+                    skipped_docs["more than one file"].append({"item": itm_name, "document": ref_name, "item link": itm_lnk})
+                
                 ref_file_name = ref_j["files"][0]["name"]
                 ref_name_escaped = ref_file_name.replace(".", "\\.").replace('"', '').replace("'", "")
                 reattached_docs[ref_id].append({
