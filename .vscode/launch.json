@@ -21,7 +21,7 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             // specify command line arguments
-            "args": ["--dry-run", "--verbose", "--confirm-before-reattaching"],
+            "args": ["--cleanup-documents", "--confirm-before-modifying"],
         }
     ]
 }
